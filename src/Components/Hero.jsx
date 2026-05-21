@@ -18,7 +18,7 @@ export default function Hero() {
 
       {/* Title */}
       <h1 className="text-2xl md:text-3xl font-bold mb-4">
-        Theodora Ayimaa Adare
+        Theodora Ayimaa Asare
       </h1>
 
       {/* Subtitle */}

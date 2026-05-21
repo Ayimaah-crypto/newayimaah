@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FreshStart - Chat with Elara</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700&amp;family=Cinzel:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#483D8B",
+                        "teal": "#008080",
+                        "gold": "#FFD700",
+                        "parchment": "#F5F5DC",
+                        "aged-parchment": "#D2B48C",
+                        "charcoal-grey": "#36454F",
+                        "background-light": "#f7f6f8",
+                        "background-dark": "#191022",
+                    },
+                    fontFamily: {
+                        "display": ["Cinzel", "serif"],
+                        "body": ["Epilogue", "sans-serif"],
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+        .message-bubble-in {
+            background-color: #F5F5DC; /* parchment */
+            color: #36454F; /* charcoal-grey */
+            border: 2px solid #D2B48C; /* aged-parchment */
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .message-bubble-out {
+            background-color: #D2B48C; /* aged-parchment */
+            color: #191022; /* background-dark */
+            border: 2px solid #FFD700; /* gold */
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .input-bar {
+            background-color: #191022;
+            border-top: 1px solid #483D8B;
+            box-shadow: 0 -2px 10px rgba(72, 61, 139, 0.5);
+        }
+        .input-field {
+            background-color: #36454F;
+            border: 1px solid #483D8B;
+            color: #F5F5DC;
+        }
+        .input-field:focus {
+            outline: none;
+            box-shadow: 0 0 10px #FFD700;
+            border-color: #FFD700;
+        }
+        .send-button {
+            color: #FFD700;
+        }
+        .send-button:hover {
+            text-shadow: 0 0 8px #FFD700;
+        }
+    </style>
+</head>
+<body class="bg-background-dark font-body" style="font-family: 'Epilogue', sans-serif;">
+<div class="relative flex h-screen w-full flex-col dark group/design-root overflow-hidden">
+<div class="flex h-full grow flex-col">
+<div class="flex flex-1 justify-center">
+<div class="flex flex-col w-full max-w-4xl flex-1 bg-background-dark">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-primary/50 px-6 py-4" style="background-image: url('https://images.unsplash.com/photo-1533134486753-c833f0ed4866?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); background-size: cover; background-position: center;">
+<div class="flex items-center gap-4 text-white">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12 border-2 border-gold" data-alt="Elara's avatar, an elven sorceress with silver hair." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD0SFl5W_5n7FiFcubb4YElgIUoot_PKi0zIlP5gDVrg19x8XGDQ5pDazGT00H2E6GCdBwhvl592qBq7SfDTtdauzDA2z6-qIuJNcWESyWusXwbhMrxiA3zELmVhCDg3bBwdSaC_bzvw22xhM3sCsgOE5EzVmz1sHtA2CA8kjxWTC89yt_MybXRC5uCV4_jyk39-R-r8prXAOddgC1uWo91oXZkaQCsi-x-7VIwoPHYYnaQ69jKLSHwCKfUFx8wn5k1J2GoqhI1ClMF");'></div>
+<div>
+<h2 class="text-white text-xl font-bold leading-tight tracking-wide font-display">Chat with Elara</h2>
+<p class="text-teal text-sm font-body flex items-center gap-2"><span class="material-symbols-outlined text-sm text-green-400">fiber_manual_record</span>Online</p>
+</div>
+</div>
+<div class="flex flex-1 justify-end gap-2">
+<button class="flex items-center justify-center overflow-hidden rounded-full h-10 w-10 bg-primary/70 text-gold hover:bg-primary">
+<span class="material-symbols-outlined">psychology</span>
+</button>
+<button class="flex items-center justify-center overflow-hidden rounded-full h-10 w-10 bg-primary/70 text-gold hover:bg-primary">
+<span class="material-symbols-outlined">local_fire_department</span>
+</button>
+<button class="flex items-center justify-center overflow-hidden rounded-full h-10 w-10 bg-primary/70 text-gold hover:bg-primary">
+<span class="material-symbols-outlined">menu_book</span>
+</button>
+</div>
+</header>
+<div class="flex-1 overflow-y-auto p-4 space-y-4">
+<div class="flex items-end gap-3 p-2">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-10 shrink-0 border-2 border-gold" data-alt="Elara's avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBZ7gHMQDuGwLZF2hsLRangXsQ7Y9HSY0NoYDSqUbo_Z7XdixkM2Z7Rc7BeMoKqmt4QeC8C_AH_v8RE0NPo017Ax7Zx6qvgex19JHInU1OnZKM2NqcbBu9XbGlmRV7l_tChNTSgRsNBcEc6eIL4fE9aBk-LWvX5hKzLbQDJeHJIdunZOBE4nE7yBMA3PVxHEAA49v0G9tjt4PiqGSfSf2NXiccCMr4z8HpGjqCGqYhvakvR8WUII8p2tgxF-njpHpy4Q-K_pKvIO1-i");'></div>
+<div class="flex flex-1 flex-col gap-1 items-start">
+<p class="text-teal text-sm font-normal leading-normal max-w-[360px] font-display">Elara</p>
+<p class="text-base font-normal leading-normal flex max-w-sm rounded-lg px-4 py-3 message-bubble-in font-body">
+                                    Greetings, traveler! What news do you bring from the Sunstone Citadel?
+                                </p>
+</div>
+</div>
+<div class="flex items-end gap-3 p-2 justify-end">
+<div class="flex flex-1 flex-col gap-1 items-end">
+<p class="text-gold text-sm font-normal leading-normal max-w-[360px] text-right font-display">You</p>
+<p class="text-base font-normal leading-normal flex max-w-sm rounded-lg px-4 py-3 message-bubble-out font-body">
+                                    The citadel stands strong, but a shadow gathers in the East. I seek your counsel.
+                                </p>
+</div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-10 shrink-0 border-2 border-gold" data-alt="Your avatar, a human warrior." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD_VGX6GBO44IQUnkPJDX-bIqfOlNLClAOu6X7bGo0dqunEQ3XfhU1fgjqMK1dVDiNnA8UPmW52KDtIHmjk36fsqauaJts8woUzJm347vwX-ejdQC6CEpQiKhXENnZzlVCshR5xOrTLxFEhT8BQIdHdyUtp1-zaMsRxNbw1xR0JBSOQSqAkKA2k_GPc6nSq9zuFzoPq43_S3DE46qfkNfVMV0NjxMs3NW30iWJL4oK14Dz0bMf8-AGZHIkTwCFwpKNPDWt9qbHxtjne");'></div>
+</div>
+<div class="flex items-end gap-3 p-2">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-10 shrink-0 border-2 border-gold" data-alt="Elara's avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA9wXaqE69QVriGWHM5mBGdNm-XWpmhsMDS9vJoA-2X-LlLxe3Ye5pfIQc8YR4S37aIgw8WPcwrBSmr77Zu0FMLkUM7pJdVrxttocf75Y3nG7MKbwce4u-qAFYj07CCccv7Ht_dvyEcO67HgfbycXDPMPwJmt2V0O9iJUvKrA5VcODxbXv8f0kQencWB9iHqJCq1c_vdH9GlF9yhqSx3fHRMfrMEpw881NpUzagph_YTt7GBHfdTBubuGorne5zpULf6U_uraebWZ5T");'></div>
+<div class="flex flex-1 flex-col gap-1 items-start">
+<p class="text-teal text-sm font-normal leading-normal max-w-[360px] font-display">Elara</p>
+<p class="text-base font-normal leading-normal flex max-w-sm rounded-lg px-4 py-3 message-bubble-in font-body">
+                                    A shadow, you say? Speak plainly. The winds of fate are stirring.
+                                </p>
+</div>
+</div>
+<div class="flex items-end gap-3 p-2 justify-end">
+<div class="flex flex-1 flex-col gap-1 items-end">
+<p class="text-gold text-sm font-normal leading-normal max-w-[360px] text-right font-display">You</p>
+<p class="text-base font-normal leading-normal flex max-w-sm rounded-lg px-4 py-3 message-bubble-out font-body">
+                                    The Oracle of the Whispering Peaks spoke of a forgotten king's return. The land grows restless.
+                                </p>
+</div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-10 shrink-0 border-2 border-gold" data-alt="Your avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD6bybGDE_8FVdbBw60e2OcxQSr5H6hfAajGwRYPmOTQwvA_NV3TQaDnCMHqqCZNLdST9pIzzTaXAo5TGrOx7crIPEMMVf_kTz6TyqgMkxc0M0PCrXq8II78MVjvYac8Oh8Xb231JyL5nJF4aihcDjNkBLg9TSF0Aj27wkLPm9M5vdlZ-45GE9--Qgf5x2F4zdb1GYHPNIxsDFisRZhP_l-RKOFq_V-R73BiOF5voqg1DBan_vxpgTLJzRUo0a8veGkiW9wwkEl2WO5");'></div>
+</div>
+</div>
+<div class="input-bar flex items-center px-4 py-3 gap-3 @container">
+<label class="flex flex-col min-w-40 h-12 flex-1">
+<div class="flex w-full flex-1 items-stretch rounded-full h-full">
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-full text-white focus:outline-0 focus:ring-0 border-none bg-[#36454F] focus:border-none h-full placeholder:text-parchment/70 px-6 pr-2 text-base font-body leading-normal input-field" placeholder="Cast a message..." value=""/>
+<div class="flex border-none bg-transparent items-center justify-center -ml-12">
+<div class="flex items-center gap-1 justify-end">
+<button class="flex items-center justify-center p-1.5 text-gold/70 hover:text-gold">
+<span class="material-symbols-outlined">add_circle</span>
+</button>
+<button class="flex items-center justify-center p-1.5 text-gold/70 hover:text-gold">
+<span class="material-symbols-outlined">scrollable_header</span>
+</button>
+</div>
+</div>
+</div>
+</label>
+<button class="flex items-center justify-center h-12 w-12 rounded-full bg-primary hover:bg-teal send-button transition-all duration-300">
+<span class="material-symbols-outlined text-2xl">science</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body></html>

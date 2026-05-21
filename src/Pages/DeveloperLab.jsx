@@ -4,6 +4,7 @@ import TechStack from "../Components/TechStack"
 import LetsBuild from "../Components/LetsBuild"
 import Navbar from "../Components/Navbar"
 import Footer from "../Components/Footer"
+import FloatingContact from "../Components/FloatingContact"
 
 export default function() {
     return(
@@ -14,6 +15,7 @@ export default function() {
         <Projects/>
         <TechStack/>
         <LetsBuild/>
+        <FloatingContact/>
        <Footer/>
 
         </main>

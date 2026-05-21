@@ -19,7 +19,7 @@ const Navbar = () => {
                     >
                         {open ? <FaTimes /> : <FaBars />}
                     </button>
-                    <h1 className="text-xl font-bold text-[#F9B896]">AyimaahDev</h1>
+                    <Link to="/" className="text-xl font-bold text-[#F9B896]">AyimaahDev</Link>
 
                 </div>
 

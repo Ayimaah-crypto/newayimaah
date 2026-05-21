@@ -89,7 +89,7 @@ const Projects = () => {
   };
 
   return (
-    <section className="relative bg-[#05010D] text-white px-6 md:px-14 py-28 overflow-hidden">
+    <section id="projects" className="relative bg-[#05010D] text-white px-6 md:px-14 py-28 overflow-hidden">
       {/* Glow Effects */}
       <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-[#7B2EFF]/10 blur-[140px] rounded-full" />
 

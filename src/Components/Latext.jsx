@@ -80,7 +80,7 @@ const filters = ["All", "Design", "Video", "Branding"];
 
 const Latext = () => {
   return (
-    <section className="relative bg-[#05010D] text-white py-20 overflow-hidden">
+    <section id="works" className="relative bg-[#05010D] text-white py-20 overflow-hidden">
       {/* Glow accents */}
       <div className="absolute top-0 left-0 w-[300px] h-[300px] bg-[#7B2EFF]/10 blur-[120px] rounded-full" />
       <div className="absolute bottom-0 right-0 w-[300px] h-[300px] bg-[#F9B896]/10 blur-[120px] rounded-full" />

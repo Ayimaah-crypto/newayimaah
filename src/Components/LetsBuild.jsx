@@ -2,8 +2,8 @@
 
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
-import { ArrowRight } from "lucide-react";
-
+import { ArrowDown } from "lucide-react";
+import { Link } from "react-router-dom";
 const LetsBuild = () => {
   return (
     <section className="relative bg-[#05010D] text-white px-6 md:px-14 pb-28 overflow-hidden">
@@ -55,7 +55,7 @@ const LetsBuild = () => {
               <button className="group px-8 py-5 rounded-2xl bg-[#F9B896] text-black font-semibold flex items-center gap-3 hover:scale-105 transition-all duration-300 shadow-2xl shadow-[#F9B896]/20">
                 Get In Touch
 
-                <ArrowRight
+                <ArrowDown
                   size={20}
                   className="group-hover:translate-x-1 transition-all duration-300"
                 />
@@ -64,21 +64,21 @@ const LetsBuild = () => {
               {/* Socials */}
               <div className="flex items-center gap-4">
                 <a
-                  href="#"
+                  href="https://github.com/Ayimaah-crypto"
                   className="w-14 h-14 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl flex items-center justify-center hover:bg-[#7B2EFF]/20 hover:border-[#7B2EFF]/30 transition-all duration-300"
                 >
                   <FaGithub size={20} />
                 </a>
 
                 <a
-                  href="#"
+                  href="www.linkedin.com/in/theodoraayimaah"
                   className="w-14 h-14 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl flex items-center justify-center hover:bg-[#7B2EFF]/20 hover:border-[#7B2EFF]/30 transition-all duration-300"
                 >
                   <FaLinkedinIn size={20} />
                 </a>
 
                 <a
-                  href="#"
+                  href="mailto:ayimaahtherodora2022@gmail.com"
                   className="w-14 h-14 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl flex items-center justify-center hover:bg-[#7B2EFF]/20 hover:border-[#7B2EFF]/30 transition-all duration-300"
                 >
                   <HiOutlineMail size={20} />
@@ -108,12 +108,12 @@ const LetsBuild = () => {
                 Terms
               </a>
 
-              <a
-                href="#"
+              <Link
+                to="/creative-studio"
                 className="hover:text-white transition-all duration-300"
               >
-                Contact
-              </a>
+                Studio
+              </Link>
             </div>
           </div>
         </div>

@@ -1,4 +1,5 @@
 import homevid from "../assets/homevid.mp4"
+import { Link } from "react-router-dom";
 
 export default function Hero() {
   return (
@@ -28,12 +29,12 @@ export default function Hero() {
       </p>
 
       {/* Call to Action */}
-      <a
-        href="/developer-lab"
+      <Link
+         to="/developer-lab"
         className="px-8 py-4 rounded-2xl bg-[#F9B896] text-black font-semibold hover:scale-105 transition duration-300 shadow-2xl shadow-[#F9B896]/20"
       >
         Explore Portfolio
-      </a>
+      </Link>
     </section>
   );
 }

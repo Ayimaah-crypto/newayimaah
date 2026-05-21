@@ -1,12 +1,10 @@
 // src/Components/FeatureCarousel.jsx
 import { useState } from "react";
 import pic1 from "../assets/Images/pic1.png"
-import pic2 from "../assets/Images/pic2.png";
-import pic3 from "../assets/Images/pic3.png";
-import pic4 from "../assets/Images/pic4.png";
-import pic5 from "../assets/Images/pic5.png";
-import pic6 from "../assets/Images/pic6.png";
-import pic7 from "../assets/Images/pic7.png";
+import pic2 from "../assets/Images/novel.jpg";
+import pic3 from "../assets/Images/Anime.png";
+import pic4 from "../assets/Images/art.png";
+
 import {
   FaGamepad,
   FaChevronLeft,
@@ -15,54 +13,54 @@ import {
 
 const slides = [
   {
-    title: "LUMIA",
+    title: "WEBSITES",
     description:
-      "Get free games, the best deals, plus a game-release calendar and gaming news all in one place.",
+      "Amazing Websites that fascinate and bring businesses to live",
     image:
       pic1,
   },
   {
-    title: "ECO FARMS",
+    title: "NOVELS",
     description:
-      "Bring your browser alive with dynamic wallpapers and immersive experiences.",
+      "Do you love reading? Oh I enjoy them. My favorite is Slave, Warrior, Queen by Morgan Rice",
     image:
       pic2,
   },
   {
-    title: "ALZHEIMER'S",
+    title: "ANIME",
     description:
-      "Personalize your setup with themes, RGB colors and futuristic interfaces.",
+      "Yhh, I'm that girl. Should've added Manhua too LOL",
     image:
       pic3,
   },
   {
-    title: "YOGLAIT YOGURT AD",
+    title: "DESIGN",
     description:
-      "Personalize your setup with themes, RGB colors and futuristic interfaces.",
+      "Creativity is bringing things together to form something that was impossibe before ",
     image:
       pic4,
   },
-  {
-    title: "YOGLAIT YOGURT AD",
-    description:
-      "Personalize your setup with themes, RGB colors and futuristic interfaces.",
-    image:
-      pic5,
-  },
-  {
-    title: "YOGLAIT YOGURT AD",
-    description:
-      "Personalize your setup with themes, RGB colors and futuristic interfaces.",
-    image:
-      pic6,
-  },
-  {
-    title: "YOGLAIT YOGURT AD",
-    description:
-      "Personalize your setup with themes, RGB colors and futuristic interfaces.",
-    image:
-      pic7,
-  },
+  // {
+  //   title: "YOGLAIT Y",
+  //   description:
+  //     "Personalize your setup with themes, RGB colors and futuristic interfaces.",
+  //   image:
+  //     pic5,
+  // },
+  // {
+  //   title: "YOGLAIT YOGURT AD",
+  //   description:
+  //     "Personalize your setup with themes, RGB colors and futuristic interfaces.",
+  //   image:
+  //     pic6,
+  // },
+  // {
+  //   title: "YOGLAIT YOGURT AD",
+  //   description:
+  //     "Personalize your setup with themes, RGB colors and futuristic interfaces.",
+  //   image:
+  //     pic7,
+  // },
   
 ];
 

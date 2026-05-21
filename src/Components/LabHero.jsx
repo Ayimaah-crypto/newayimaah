@@ -55,12 +55,14 @@ const Hero = () => {
                     {/* Buttons */}
                     <div className="mt-10 flex flex-wrap gap-5">
                         <button className="px-8 py-4 rounded-2xl bg-[#F9B896] text-black font-semibold hover:scale-105 transition duration-300 shadow-2xl shadow-[#F9B896]/20">
-                            Explore Portfolio
+                            <a href="#projects">
+                                Explore Webs
+                            </a>
                         </button>
 
-                        <button className="px-8 py-4 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md hover:bg-white/10 transition duration-300">
+                        {/* <button className="px-8 py-4 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md hover:bg-white/10 transition duration-300">
                             Contact Me
-                        </button>
+                        </button> */}
                     </div>
 
                     {/* Stats */}

@@ -1,5 +1,6 @@
 // src/Components/FinalShowcase.jsx
 import final from "../assets/Images/final.png"
+import { Link } from "react-router-dom";
 export default function FinalShowcase() {
   return (
     <section className="relative overflow-hidden bg-[#0C0B15] min-h-screen flex items-center justify-center px-6">
@@ -25,8 +26,8 @@ export default function FinalShowcase() {
 
         {/* Button */}
         <div className="mt-10">
-          <a
-            href="/contact"
+          <Link
+            to="/creative-studio"
             className="
               inline-flex items-center gap-3
               bg-[#F9B896] hover:bg-[#8200DB]
@@ -37,8 +38,8 @@ export default function FinalShowcase() {
               shadow-[0_0_40px_rgba(236,72,153,0.4)]
             "
           >
-            Start A Project
-          </a>
+            View Studio
+          </Link>
         </div>
 
         {/* Main Image */}

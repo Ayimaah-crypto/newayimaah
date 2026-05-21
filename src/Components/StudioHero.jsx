@@ -81,7 +81,7 @@ const StudioHero = () => {
 
           {/* Paragraph */}
           <p className="mt-10 text-lg md:text-xl leading-relaxed text-gray-300 max-w-2xl">
-            We craft premium brand identities, cinematic marketing
+            Crafting premium brand identities, cinematic marketing
             videos, social media creatives, and high-converting
             digital experiences for modern brands.
           </p>
@@ -89,7 +89,9 @@ const StudioHero = () => {
           {/* Buttons */}
           <div className="mt-12 flex flex-wrap gap-5">
             <button className="group px-8 py-5 rounded-2xl bg-gradient-to-r from-[#7B2EFF] to-[#F9B896] font-semibold text-white flex items-center gap-3 hover:scale-105 transition-all duration-300 shadow-2xl shadow-[#7B2EFF]/30">
-              Explore Our Work
+              <a href="#works">
+                Explore My Works
+              </a>
 
               <ArrowRight
                 size={20}

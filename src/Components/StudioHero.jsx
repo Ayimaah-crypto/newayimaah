@@ -5,7 +5,7 @@ import studio from "../assets/studio.mp4"
 
 const StudioHero = () => {
   return (
-    <section className="relative h-screen overflow-hidden bg-black text-white">
+    <section className="relative min-h-screen overflow-hidden bg-black text-white pt-24">
       {/* Background Video */}
       <video
         autoPlay
@@ -49,7 +49,7 @@ const StudioHero = () => {
       </div> */}
 
       {/* Main Content */}
-      <div className="relative z-10 max-w-7xl mx-auto mt-13 px-6 md:px-14 h-full flex items-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-14 min-h-[85vh] flex items-center   ">
         <div className="max-w-3xl">
           {/* Badge */}
           <div className="inline-flex items-center gap-3 px-5 py-3 rounded-full border border-white/10 bg-white/[0.04] backdrop-blur-xl mb-8">
@@ -107,7 +107,7 @@ const StudioHero = () => {
           {/* Bottom Info */}
           <div className="flex items-center gap-8 mt-16">
             {/* Mini Users */}
-            <div className="flex -space-x-4">
+            {/* <div className="flex -space-x-4">
               <img
                 src="/users/user1.jpg"
                 alt=""
@@ -125,11 +125,11 @@ const StudioHero = () => {
                 alt=""
                 className="w-12 h-12 rounded-full border-2 border-[#05010D] object-cover"
               />
-            </div>
+            </div> */}
 
-            <p className="text-gray-400">
+            {/* <p className="text-gray-400">
               Trusted by 30+ brands worldwide
-            </p>
+            </p> */}
           </div>
         </div>
       </div>

@@ -46,16 +46,16 @@ const Footer = () => {
               </Link>
 
               <Link to="developer-lap" className="hover:text-white transition">
-                Projects
+                Web Apps
               </Link>
 
               <Link to="/creative-studio" className="hover:text-white transition">
                 Studio
               </Link>
 
-              <a href="#" className="hover:text-white transition">
+              {/* <a href="#" className="hover:text-white transition">
                 Contact
-              </a>
+              </a> */}
             </div>
 
             {/* RIGHT SOCIALS */}
